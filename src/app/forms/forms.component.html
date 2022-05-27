@@ -1,0 +1,33 @@
+<div class="overlay" *ngIf='isLoading.includes(0)'>aaa<img src='assets/200.gif' alt="Logo" /></div>
+<div class="topclass">
+  <form class="formspost">
+    <select [ngModel]="country_id" (ngModelChange)="onChangeCountry($event)" name="f1">
+        <option *ngFor="let item of countries"
+            [value]="item.id"
+            [selected]="item.id==country_id">
+          {{item.name}}
+        </option>
+    </select>
+
+    <div class="calendarfloat2"></div>
+
+    <select [ngModel]="current_month" (ngModelChange)="onChangeMonth($event)" name="f2">
+        <option *ngFor="let item of months"
+            [value]="item.month"
+            [selected]="item.month==current_month">
+          {{item.monthname}}
+        </option>
+    </select>
+
+   <div class="calendarfloat2"></div>
+
+    <select [ngModel]="current_year" (ngModelChange)="onChangeYear($event)" name="f3">
+        <option *ngFor="let item of years"
+            [value]="item"
+            [selected]="item==current_year">
+          {{item}}
+        </option>
+    </select>
+  </form>
+  <app-listing [daysofmonth]="daysofmonth" [freedaysyear]="freedaysyear" (newItemEvent)="getFreeadyChildListing($event)"></app-listing>
+</div>

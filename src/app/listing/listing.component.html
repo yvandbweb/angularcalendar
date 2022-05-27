@@ -1,0 +1,40 @@
+<div class="calendar">
+  <div class="calendtable">
+     <div *ngFor="let item of daysofmonth; let i = index">
+        <div class="dataitem" [ngClass]="{'lightblue': item.type === 'empty','blue': item.weekend === 'yes', 'green' : item.type === 'freeday', 'purple' : item.easter === 'yes' }">
+          <div *ngIf="item.type !== 'empty'">
+            <div class="weekname">
+              {{item.dayname}}
+            </div>
+            <div class="weeknamemob">
+              {{item.dayname.substring( 0, 3 )}}
+            </div>
+            <div class="clear"></div>
+            <div class="daynumber">
+              {{item.daynumber}}
+            </div>
+            <div class="clear"></div>
+            <div class="freedayname" *ngIf="item.freedayname !== 'none'">
+              {{item.freedayname}}
+            </div>
+            <div class="clear"></div>
+          </div>
+      </div>
+      <div class="clear" *ngIf="(i+1) % 7 === 0"></div>
+    </div>
+  </div>
+  <div class="calendarfloat"></div>
+  <div class="calendarlisting">
+      <ul>
+          <li class="clickhere" *ngFor="let item of freedaysyear; let i = index">
+            <span class="ab"  (click)="refreshParentChild(item.month)">
+              <span [ngClass]="{'fontcolor': item.easter !== 'yes','fontcoloreaster': item.easter === 'yes' }">
+               <b>{{item.freedayname}}</b>
+               </span>
+               {{item.dayname}}
+               <i>{{item.daynumber}} {{item.monthname}}</i>
+             </span>
+           </li>
+      </ul>
+  </div>
+</div>

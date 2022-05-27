@@ -1,0 +1,148 @@
+.dataitem{
+  float:left;
+  width:85px;
+  height:100px;
+  border:1px solid black;
+}
+
+.dataitem.lightblue{
+  background-color:#e9f4ff;
+}
+
+.dataitem.blue{
+  background-color:#5797d4;
+  color:white;
+}
+
+.dataitem.green{
+  background-color:#29c376;
+  color:white;
+}
+
+.dataitem.purple{
+  background-color:#b529c3;
+  color:white;
+}
+
+.weekname{
+  float:left;
+  text-align:center;
+  width:100%;
+  margin-top:10px;
+}
+
+.freedayname{
+  float:left;
+  text-align:center;
+  width:100%;
+  font-weight:bold;
+}
+
+.daynumber{
+  float:left;
+  text-align:center;
+  width:100%;
+  font-size:33px;
+  font-weight: bold;
+}
+
+.fontcolor{
+  color:#009f1c;
+}
+
+.fontcoloreaster{
+  color:#b20088;
+}
+
+.calendar{
+  float:left;
+  width:100%;
+  margin-top:20px;
+
+}
+
+.calendtable{
+  float:left;
+  width:69%;
+}
+
+.calendarfloat{
+  float:left;
+}
+
+.calendarlisting{
+  float:left;
+  width:30%;
+  text-align:left;
+}
+
+.freedayname{
+  font-size:10px;
+  margin-left:1px;
+  margin-right:1px;
+}
+
+.clickhere{
+  padding:5px;
+}
+
+.ab{
+  cursor: pointer;
+}
+
+.weeknamemob{
+  display:none;
+}
+
+.weekname{
+  display:block;
+}
+
+@media only screen and (max-width: 900px) {
+
+
+ .centered {
+   width:98%;
+   margin-left:1%;
+   margin-right:1%;
+ }
+
+ .calendarfloat{
+   clear:both;
+ }
+
+ .calendtable{
+   float:none;
+   width:368px;
+   margin:0 auto;
+ }
+
+ .calendarlisting{
+   width:100%;
+ }
+
+ .dataitem{
+   width:50px;
+   height:77px;
+ }
+
+ .freedayname{
+   font-size:7px;
+   font-weight:normal;
+ }
+
+ .weekname{
+    font-size:11px;
+    margin-top:5px;
+ }
+
+ .weeknamemob{
+   display:block;
+   margin-top:3px;
+ }
+
+ .weekname{
+   display:none;
+ }
+
+}
